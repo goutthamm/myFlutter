@@ -1,5 +1,10 @@
  import 'package:flutter/material.dart';
 
+void main()
+{
+  runApp(App01());
+}
+
 class App01 extends StatefulWidget {
    const App01({super.key});
 
@@ -13,7 +18,8 @@ class App01 extends StatefulWidget {
   bool _pass = true;
     @override
    Widget build(BuildContext context) {
-     return Scaffold(
+     return MaterialApp(
+         home: Scaffold(
        appBar: AppBar(
          title: Center(child: Text("LOGIN PAGE", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold))),
          backgroundColor: Colors.limeAccent,
@@ -52,7 +58,7 @@ class App01 extends StatefulWidget {
                padding: const EdgeInsets.all(8.0),
                child: TextField(decoration: InputDecoration(
                    labelText: "E-MAIL",
-                   hintText: "ENTER YOUR E=mail ID",
+                     hintText: "ENTER YOUR E=mail ID",
                    prefixIcon: Icon(Icons.mail),
                    border: OutlineInputBorder(
                      borderRadius: BorderRadius.circular(50),
@@ -141,6 +147,7 @@ class App01 extends StatefulWidget {
            ]
          ),
        )
+     )
      );
 
    }

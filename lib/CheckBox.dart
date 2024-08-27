@@ -27,12 +27,11 @@ class _ApppState extends State<Appp> {
               children:[ Checkbox(value: _check1, onChanged: (value) {
                 setState(() {
                   _check1 = value!;
-                  
                 });
               },),
                 Text("Checkbox")
               ]
-        
+
             ),
             CheckboxListTile(
               title: Text("Agree to all privacy policies"),
